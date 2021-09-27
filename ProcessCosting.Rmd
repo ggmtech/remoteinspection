@@ -1,0 +1,454 @@
+---
+journal: jhm
+layout: draft
+title: Cost Impact of Specifications
+author1: Gopal Kumar
+author2: AN Mathur
+author3: DB Singh
+currentaddress: "RDSO"
+affiliation: "RDSO, Lucknow"
+exauthors: 
+  - name: 
+    exaffiliation: QA(Mech)
+    correspondingauthor: "QA(Mech), Third Floor, Annexi2, RDSO."
+    email: \email{pedqamechrdso@gmail.com}
+  - name: AN Mathur
+    exaffiliation: PED/PS/RDSO
+    currentaddress: "PED/QA/Elect"
+abstract: Spl.DG/VD nominated a committee consisting of PED/QA(Mech), PED/PS and PED/QA/S&T for recommendations on through costing in RDSO for the items controlled by RDSO.
+#bibliography: amstest.bib
+#csl: american-meteorological-society.csl
+output: rticles::ams_article
+---
+
+# Introduction
+
+
+
+## Secondary headings {-}
+
+Secondary headings labeled with letters are formatted using the `## Secondary headings {-}` for a single subsection within a section or `## Secondary headings` for multiple subsections within one section.
+
+### Tertiary headings {-}
+
+Tertiary headings are formatted using the `### Tertiary headings {-}` for single a subsubsection within a subsection or `### Tertiary headings` for multiple subsubsections within a subsection. 
+
+\paragraph*{Quaternary headings}
+Quaternary headings are formatted using the `\paragraph*{Quaternary headings}` for a single paragraph within a subsubsection or `\paragraph{Quaternary headings}` for multiple paragraphs within a subsection.
+
+# Citations
+
+
+
+The insertion of a sample figure (Fig. \ref{f1})  
+and caption is given below (in the .tex document) and at the end of the document. Standard figure sizes are 19 (one column), 27, 33, and 39 (two columns) picas.
+
+\begin{figure}[h]
+ \centerline{\includegraphics[width=19pc]{figure01.pdf}}
+  \caption{Enter the caption for your figure here.  Repeat as
+  necessary for each of your figures.}\label{f1}
+\end{figure}
+
+```{r,echo=FALSE,fig.cap='test the rmd output',fig.align='center',fig.width=3.17}
+plot(1:10)
+```
+
+### Tables
+Each table must be numbered, provided with a caption, and mentioned specifically in the text. 
+See below (in the .tex document) and at the end of the document for the formatting of a sample table (Table
+\ref{t1}).
+
+\begin{table}[h]
+\caption{This is a sample table caption and table layout.}\label{t1}
+\begin{center}
+\begin{tabular}{ccccrrcrc}
+\topline
+$N$ & $X$ & $Y$ & $Z$\\
+\midline
+ 0000 & 0000 & 0010 & 0000 \\
+ 0005 & 0004 & 0012 & 0000 \\
+ 0010 & 0009 & 0020 & 0000 \\
+ 0015 & 0016 & 0036 & 0002 \\
+ 0020 & 0030 & 0066 & 0007 \\
+ 0025 & 0054 & 0115 & 0024 \\
+\botline
+\end{tabular}
+\end{center}
+\end{table}
+
+\acknowledgments
+
+
+Please use The authors thank \ldots rather than The authors would like to thank \ldots.
+
+The author thanks Mats Dahlgren for version one of \textsf{achemso}, and Donald Arseneau for the code taken from \textsf{cite} to move citations after punctuation. Many users have provided feedback on the class, which is reflected in all of the different demonstrations shown in this document.
+
+\appendix[A] 
+
+\appendixtitle{Title of Appendix}
+
+## Appendix section
+
+The AMS template allows authors to format an unlimited number of appendixes. To format a single appendix, use the `\appendix` command with no additional argument. Otherwise, add the appropriate one-letter argument to the `\appendix` command (e.g. `\appendix[A]`, `\appendix[B]`, `\appendix[C]`, etc.) corresponding to the appropriate appendix. 
+
+The title of the appendix can be formatted using the `\appendixtitle{} ` command. The `##` , `###` and `\paragraph` commands are used to create sections within the appendix. (Note that the appendix title takes the place of `#` in the appendix, so the first section should begin with `##` instead of `#`.)
+
+Equations are automatically numbered appropriately for each appendix. Here is an example of the first equation in appendix A, automatically labeled (\ref{eq:1}): 
+
+\begin{equation}
+\label{eq:1}
+x=\frac{2b\pm\sqrt{b^{2}-4ac}}{2c}.  
+\end{equation}
+
+For appendix figures and tables, special commands are needed to manually change the numbering to ensure that each appendix figure or table is numbered as part of the appendix and not as a continuation of the main paper. Use the command `\appendcaption{}` instead of the usual `\caption{}` to adjust the numbering; for example, for Table A1, you would use the command `\appendcaption{A1}`. In-text callouts for each appendix figure and table will need to be written as plain text;the usual `\ref{}` command cannot be used.
+
+\appendix[B]
+\appendixtitle{File Structure of the AMS \LaTeX\ Package}
+
+## AMS \LaTeX\ files
+You will be provided with a tarred, zipped \LaTeX\ package containing 3 files. These files are
+
+\begin{description}
+
+\item
+  your-paper-name.Rmd template for your paper
+\item
+  amstest.bib an example of a bibliographic database file.
+\item
+  figure01.pdf are sample figures.
+
+\end{description}
+
+## Help for Authors
+
+Questions and feedback concerning the use of the AMS \LaTeX\ files should be directed to latex@ametsoc.org or yufreecas@gmail.com(for rmarkdown issues). Additional information is available on the AMS \LaTeX\ Submission Info web page (\url{http://www2.ametsoc.org/ams/index.cfm/publications/authors/journal-and-bams-authors/author-resources/latex-author-info/}).
+
+\appendix[C]
+\appendixtitle{Building a PDF and Submitting Your \LaTeX\ Manuscript Files to the AMS}
+
+## Building your own PDF
+
+There are a variety of different methods and programs that will create a final PDF from your \LaTeX\ files. The easiest method is to download one of the freely available text editors/compilers such as Rstudio to compile your files into a PDF.
+
+## Submitting your files to the AMS for peer review
+
+The AMS uses the Editorial Manager system for all author submissions for peer review. Editorial Manager uses the freely available \TeX\ Live 2011 distribution. This system will automatically generate a PDF from your submitted \LaTeX\ files and figures(not Rmd file, tex files will be produced when you successful knit your Rmd file).  
+
+You should not upload your own PDF into the system. If the system does not build the PDF from your files correctly, refer to the AMS \LaTeX\ FAQ page first for possible solutions. If your PDF still does not build correctly after trying the solutions on the FAQ page, email latex@ametsoc.org for help.
+
+## Other software
+As mentioned above, there is a variety of software that can be used to edit .tex files and build a PDF.  The AMS does not support \LaTeX\/-related WYSIWYG software, such as Scientific Workplace, or WYSIWYM software, such as LyX.  \TeX\ Live (available online at \\ \url{http://www.tug.org/texlive/}) is recommended for users needing an up-to-date \LaTeX\ distribution with software that includes an editor and the ability to automatically generate a PDF.
+
+# References {-}
+\bibliography{references}
+
+\begin{table}
+\appendcaption{A1}{Here is the appendix table caption.}
+\centering
+\begin{tabular}{ccc}
+\topline
+$1$ & $2$ & $3$ \\
+\midline
+a&b&c \\
+d&e&f \\
+\botline
+\end{tabular}
+\end{table}
+
+\begin{figure}
+\centerline{(illustration here)}
+\appendcaption{A1}{Here is the appendix figure caption.}
+\end{figure}
+
+\begin{figure}
+\centerline{(illustration here)}
+\appendcaption{B1}{Here is the appendix figure caption.}
+\end{figure}
+
+
+# noted researched
+
+RDSO ISO
+
+1	No cost aspect in RDSO ISO QO-D-8.1-1 Creation of the New RDSO Standard
+BIS not doing it
+
+
+
+3	Old ISO:  QO-D-8.1-1 Creation of new specification for items
+
+Para 4.6 Approval for issue of specification The concerned officer dealing with the particular specification shall put up proposal for the new specification to directorate head for approval to initiate the creation. When putting up the file to the directorate head, the concerned officer shall prepare a self-contained note addressing the following questions. Why the need for creation of new specification had arisen? 
+a) Vendor base and action plan to develop new vendors. 
+b) Pricing of the item. Some quantitative estimation of pricing of the item shall be indicated in note for information 
+c) A feedback format indicating specific parameters (for which feedback shall be collected) shall be prescribed along with the option to offer – “Any other remarks (other than those prescribed)”
+
+
+
+2	QO-D-8.1-5 Application for Registration of Vendor - No cost requirement
+
+
+Group of items costing like raw material
+
+Weight of materials
+Technology
+
+
+Softwares
+
+Whatsapp friday 17 sept
+A committee of PED/QAM, PED/EL, PED/QAEl have to submit recommendations on the issue to Spl.DG by 15/10/2021.
+Hence, faster suggestion, eg by next week, are requested from all.
+
+
+It is proposed that a thorough costing should be done by design directorates during the development of specification , its review and product development stage. 
+The same should be published in the Vendor directory to enable ZR /PU to decide on cost of procurement.
+The suggestion and relevant points/remarks may please be given on WhatsApp or email pedqamechrdso@gmail.com to undersigned by 24 sept please
+
+
+> As per my limited information, there is a specific proprietary costing and design optimization software's are already available for the same.
+DFMA  Boothroyd Dewhurst, Inc. https://www.dfma.com is available. This has module for design for manufacturing (DFM) and so design for assembly (DFA). The software deals with complete work study/ time study and data is already populated bases on the in depth research of time study and also has massive data of various manufacturing equipment and their capabilities. The software claims it can estimate the cost of manufacture within 10% of actual and its database has he manufacturing costs of various sub activities for US market and china market and even the cost of contract manufacturing with china can also be compared with in house manufacture.
+Another product aPriori which has higher functionality and complexity
+
+
+
+
+Last Purchaser Rates
+
+
+
+Issues: 
+Many of the specifications are functional and the detailing is not there and hence cost not estimated
+
+Proprietary item / process Twist locks
+
+Purchase agency may take estimate from other countries for similar items
+Weight thumb rules based costing
+Volume 
+
+
+I
+
+BIS not  mentioned even by BIS
+Budgetary quotation, Last Purchase rates
+List of items where costing is possible
+
+
+
+Quantity is not possible for all items
+Fast change of technology and process
+
+Quality improvement  
+
+Identification of items:
+Costing varies vendor to vendor
+Cost will pag at higher level.
+TCM duty
+Costing directorate 
+Cost from firm
+Cost accountant ICMA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ SOLIDWORKS
+3D CAD Design Software | SOLIDWORKS. Save time and development costs, avoid redesigns, and increase productivity by continuously checking your designs against cost targets with automated manufacturing cost estimation tools fully integrated with SOLIDWORKS 3D CAD software.
+
+
+
+ SOLIDWORKS
+3D CAD Design Software | SOLIDWORKS. Save time and development costs, avoid redesigns, and increase productivity by continuously checking your designs against cost targets with automated manufacturing cost estimation tools fully integrated with SOLIDWORKS 3D CAD software.
+
+
+
+
+
+
+
+
+
+(https://www.javelin-tech.com/3d/solidworks-costing/)
+SOLIDWORKS Costing estimates part manufacturing costs and generates quotes.
+
+
+SOLIDWORKS automatic Costing Tool generates estimates of part manufacturing costs that adjust whenever you modify your design. You can easily track costs to ensure your projects stay on target to meet profit goals. Designers can make faster, repeatable, and more informed design decisions based on cost, and change their designs to lower manufacturing cost. Manufacturers can automate their quoting process. The Costing tool’s cost templates are customizable, enabling you to enter your specific manufacturing costs and data, such as material, labor, machine speed and feeds, and setup costs.
+
+For Designers, Engineers and Engineering Managers:
+“Design for Cost” up-front, and eliminate need to “Redesign for Cost” later.
+Make design decisions based on cost of manufacturing a design.
+Faster and more repeatable than quotes from external and internal manufacturing.
+
+For Manufacturers:
+“Instant quotes” – not just fast, instantaneous manufacturing quotes for customers.
+Much faster than spreadsheets, counting features and other forms of manual quoting.
+Much more repeatable and accurate than “rule of thumb” estimates.
+Dead accurate to manufacturing data provided in the customizable templates.
+Template data can be calibrated to actual costs thereby further improving accuracy.
+As you design, manufacturing costs are automatically calculated behind the scenes, real-time, allowing you to always have an up-to-date cost estimate.  Costing is available for sheet metal and machined parts.
+
+SOLIDWORKS Costing Features
+Hit cost targets and maintain healthy profit margins.
+Automatic manufacturing cost estimates.
+Included with SOLIDWORKS Professional and SOLIDWORKS Premium.
+For Machining, Casting, Plastic, 3D Printing and Structural Members.
+Cost automatically calculated for any 3D CAD model, even imported.
+Based on part geometry, NOT SOLIDWORKS features – no “special features” needed in your design.
+Costs update with every part change; but can set baselines for comparison.
+Compare costs of design configurations.
+Compare manufacturing vendors and processes.
+Compare materials and thicknesses.
+Default costing templates provided, you can…
+Customize with your own manufacturing settings
+Output detailed cost reports
+Assembly cost roll-up in BOM and Assembly Visualization
+Raw material types and costs
+Manufacturing processes, machines, tooling, and associated costs
+Direct labor rates for specific machines and processes
+Company specific manufacturing process information, including feeds, speeds, and setup costs
+Any custom operations, such as deburring, painting, anodizing, data entry, shipping, etc.
+Cost of specific SOLIDWORKS Library Features
+
+(from https://www.javelin-tech.com/3d/solidworks-costing/ )
+
+
+
+
+https://www.oreilly.com/
+.1 Introduction
+
+6.2 Fundamentals of Cost Analysis
+
+6.2.1 Elements in the Cost Estimate
+
+6.2.2 Type of Costs
+
+Fixed versus Variable Costs
+
+Direct and Indirect Costs
+
+6.2.3 Overhead Costs
+
+6.2.4 Cost-Estimating Techniques
+
+Qualitative Cost-Estimating Techniques
+
+Quantitative Cost-Estimating Techniques
+
+6.3 Manufacturing Cost Models
+
+6.3.1 Manufacturing Cost Elements for In-House Parts
+
+Processing Cost Cp
+
+Unit Time tunit
+
+6.3.2 Machining Cost Model
+
+Setup Time Tsu
+
+Operation Time to
+
+Non-operation Time
+
+Tooling Cost Ct
+
+Material Cost Cmat
+
+6.3.3 Injection Molding Cost Model
+
+Machine Rate Rm
+
+Molding Cycle Time to
+
+Mold Cost Estimation
+
+Material Cost Cmat
+
+6.3.4 Sheet Metal Stamping Cost Model
+
+Material Cost Cmat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Why DFMA fails
+Why DFMA Efforts Fail, Mike Shipulski.  Director of Engineering, Hypertherm, Inc. 
+
+At the highest level, DFMA efforts fail due to a lack of knowledge of DFMA fundamentals. This lack of
+knowledge causes companies to violate the DFMA fundamentals which result in DFMA failure modes. Though
+this assertion sounds good, it is of little value because its level of abstraction is too high. The assertion must be
+broken down into an explicit set of DFMA fundamentals that are clearly defined; then the fundamentals must
+map in a clear way to specific DFMA failure modes which are observed in actual DFMA projects. Learning
+occurs when the failure modes map to their root causes and countermeasures. It is these all important
+countermeasures that can overcome or prevent the DFMA failure modes. The mapping of fundamentals to
+failure modes to root causes to countermeasures looks like this:
+Mapping from DFMA Fundamentals
+The remainder of the paper discusses the four most important DFMA fundamentals, their failure modes, root causes, and countermeasures which are summarized here:
+Violations of
+DFMA
+Fundamentals
+
+DFMA
+Failure
+Modes
+
+Root
+Causes
+
+DFMA
+Countermeasures
+
+https://www.dfma.com/pdf/getstarted/2008A.pdf
+
+Fundamental 3 – Irresponsible DFM bankrupts suppliers Irresponsible DFM occurs when an OEM uses the DFM banner to take profit margin from their suppliers instead of working with the supplier to design out cost. With irresponsible DFM, the OEM has no intent to design out cost, rather, expects the supplier to do all the work and get none of the rewards. The tell-tale sign of this failure mode is when DFM is done without changing the design. These DFM projects are typically led by purchasing or manufacturing and have no design engineering resources allocated to the projects. To be clear, the responsibility for irresponsible DFM belongs to those who say “no” to allocation of engineering resources and not to purchasing and manufacturing folks who get stuck running the projects. Like the previous failure modes, the lack of engineering resources is an important component of failure mode 3. Here’s how the rest of the failure mode comes about. A significant cost reduction goal is placed on manufacturing or purchasing with the constraint that there are no engineering resources available to redesign the product or validate any proposed design changes. Leadership wants to believe that DFM can be done without changing the design. As we all know, the cost reduction goal must be achieved. Someone comes up with the idea to use DFM to work in a collaborative way with the suppliers using DFM. No one else has a better idea, so a DFM campaign is launched. But since the design cannot change, the only way to achieve the cost reductions is for the suppliers to reduce their conversion costs. Since the suppliers have already signed up for another cost reduction goal for the OEMs’ lean initiatives, there are no conversion cost savings left to mis-allocate to DFM. The suppliers must reduce their profit margins to achieve the DFM initiative savings. After a few of these irresponsible DFM campaigns, the suppliers go out of business and the OEMs must spend lots of money developing and qualifying new supply bases. I think OEMs spend more money with the follow-on supplier development and qualification than they save with irresponsible DFM. The OEMs are better off not doing irresponsible DFM. The best suppliers will find a way to avoid irresponsible DFM and protect the OEMs from themselves.  
